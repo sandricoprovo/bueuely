@@ -8,6 +8,7 @@
         "start": "next start",
         "lint": "next lint",
         "db:start": "cd ./supabase && supabase start",
+        "db:stop": "cd ./supabase && supabase stop --backup",
         "db:types": "cd ./supabase && supabase gen types typescript --local > ../lib/database.types.ts"
     },
     "dependencies": {
