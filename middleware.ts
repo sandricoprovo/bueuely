@@ -3,6 +3,8 @@ import { NextResponse } from 'next/server';
 import type { Database } from '@/lib/schema';
 import type { NextRequest } from 'next/server';
 
+const PUBLIC_PATHS = ['/login', '/signup', '/'];
+
 // Handles updating the user session data via supabase whenever a user changes routes.
 export async function middleware(req: NextRequest) {
     const res = NextResponse.next();
@@ -14,7 +16,7 @@ export async function middleware(req: NextRequest) {
         data: { session },
     } = await supabase.auth.getSession();
 
-    if (!session && pathname === '/') {
+    if (!session && !PUBLIC_PATHS.includes(pathname)) {
         const url = new URL(req.url);
         url.pathname = '/login';
         return NextResponse.redirect(url);
