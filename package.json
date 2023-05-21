@@ -1,29 +1,21 @@
 {
-    "name": "bueuely",
-    "version": "0.1.0",
-    "private": true,
-    "scripts": {
-        "dev": "next dev",
-        "build": "next build",
-        "start": "next start",
-        "lint": "next lint",
-        "db:start": "cd ./supabase && supabase start",
-        "db:stop": "cd ./supabase && supabase stop --backup",
-        "db:types": "cd ./supabase && supabase gen types typescript --local > ../lib/database.types.ts"
-    },
-    "dependencies": {
-        "@supabase/auth-helpers-nextjs": "^0.6.1",
-        "@supabase/supabase-js": "^2.22.0",
-        "@types/node": "20.1.4",
-        "@types/react": "18.2.6",
-        "@types/react-dom": "18.2.4",
-        "autoprefixer": "10.4.14",
-        "next": "13.4.2",
-        "postcss": "8.4.23",
-        "react": "18.2.0",
-        "react-dom": "18.2.0",
-        "swr": "^2.1.5",
-        "tailwindcss": "3.3.2",
-        "typescript": "5.0.4"
-    }
+  "name": "app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-check --tsconfig ./tsconfig.json"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^2.0.3",
+    "@tsconfig/svelte": "^4.0.1",
+    "svelte": "^3.57.0",
+    "svelte-check": "^2.10.3",
+    "tslib": "^2.5.0",
+    "typescript": "^5.0.2",
+    "vite": "^4.3.2"
+  }
 }
