@@ -18,6 +18,9 @@ devDependencies:
   svelte-check:
     specifier: ^2.10.3
     version: 2.10.3(svelte@3.57.0)
+  svelte-routing:
+    specifier: ^1.8.9
+    version: 1.8.9
   tslib:
     specifier: ^2.5.0
     version: 2.5.0
@@ -977,6 +980,10 @@ packages:
       strip-indent: 3.0.0
       svelte: 3.57.0
       typescript: 5.0.2
+    dev: true
+
+  /svelte-routing@1.8.9:
+    resolution: {integrity: sha512-4+J1F57sKkI5+d5nhCQs2ChPo9tn0gIFqFaA38c+yNYZ5UzsGq80mCVA2E0tqPtkO2VzZTJD0Lw2P8N3Z/068g==}
     dev: true
 
   /svelte@3.57.0:
