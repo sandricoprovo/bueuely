@@ -1,6 +1,11 @@
 <script lang="ts">
     const helloworld = 'Hello World';
-    console.log(helloworld);
 </script>
 
-<h1>HOME PAGE</h1>
+<h1>
+    HOME PAGE
+    <span>POSTCSS TEST</span>
+</h1>
+
+<style lang="postcss">
+</style>
