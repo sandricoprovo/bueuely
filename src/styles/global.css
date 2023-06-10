@@ -4,6 +4,56 @@
 */
 
 :root {
+    /* === COLORS === */
+    /* Grey Scale */
+    --grey-10: hsla(0, 0%, 6%, 1);
+    --grey-20: hsla(0, 0%, 8%, 1);
+    --grey-30: hsla(0, 0%, 10%, 1);
+    --grey-40: hsla(0, 0%, 12%, 1); /* main */
+    --grey-50: hsla(0, 0%, 20%, 1);
+    --grey-60: hsla(0, 0%, 27%, 1);
+    --grey-70: hsla(0, 0%, 35%, 1);
+    --grey-80: hsla(0, 0%, 44%, 1);
+    --grey-90: hsla(0, 0%, 53%, 1);
+    --grey-100: hsla(0, 0%, 62%, 1);
+    --grey-110: hsla(0, 0%, 71%, 1);
+    --grey-120: hsla(0, 0%, 80%, 1);
+    --grey-130: hsla(0, 0%, 90%, 1);
+    --grey-140: hsla(0, 0%, 100%, 1);
+    /* Dark Spring Green */
+    --dark-spring-green-10: hsla(135, 25%, 51%, 1);
+    --dark-spring-green-20: hsla(136, 33%, 44%, 1);
+    --dark-spring-green-30: hsla(139, 48%, 36%, 1);
+    --dark-spring-green-40: hsla(148, 98%, 24%, 1); /* main */
+    --dark-spring-green-50: hsla(147, 98%, 21%, 1);
+    --dark-spring-green-60: hsla(147, 98%, 18%, 1);
+    --dark-spring-green-70: hsla(145, 100%, 14%, 1);
+    --dark-spring-green-80: hsla(144, 100%, 11%, 1);
+    --dark-spring-green-90: hsla(142, 100%, 8%, 1);
+    --dark-spring-green-100: hsla(139, 100%, 6%, 1);
+    /* Engineering Orange */
+    --engineering-orange-10: hsl(8, 60%, 61%, 1);
+    --engineering-orange-20: hsl(7, 58%, 55%, 1);
+    --engineering-orange-30: hsl(6, 61%, 48%, 1);
+    --engineering-orange-40: hsl(4, 83%, 40%, 1); /* main */
+    --engineering-orange-50: hsl(4, 85%, 34%, 1);
+    --engineering-orange-60: hsl(5, 88%, 29%, 1);
+    --engineering-orange-70: hsl(4, 90%, 24%, 1);
+    --engineering-orange-80: hsl(3, 92%, 19%, 1);
+    --engineering-orange-90: hsl(3, 94%, 14%, 1);
+    --engineering-orange-100: hsl(2, 96%, 10%, 1);
+    /* Jonquil */
+    --jonquil-10: hsla(47, 87%, 72%, 1);
+    --jonquil-20: hsla(47, 88%, 67%, 1);
+    --jonquil-30: hsla(48, 88%, 61%, 1);
+    --jonquil-40: hsla(50, 98%, 48%, 1); /* main */
+    --jonquil-50: hsla(50, 99%, 41%, 1);
+    --jonquil-60: hsla(50, 99%, 35%, 1);
+    --jonquil-70: hsla(50, 99%, 30%, 1);
+    --jonquil-80: hsla(50, 100%, 24%, 1);
+    --jonquil-90: hsla(49, 100%, 18%, 1);
+    --jonquil-100: hsla(49, 100%, 13%, 1);
+
     /* === TYPOGRAPHY === */
     --font-family: 'Overpass';
     --fallback-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
@@ -55,6 +105,7 @@
         var(--font-900)
     );
 
+    /* === Global CSS === */
     * {
         font-family: var(--font-family), var(--fallback-font);
         font-weight: 400;
