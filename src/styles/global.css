@@ -105,9 +105,41 @@
         var(--font-900)
     );
 
-    /* === Global CSS === */
+    /* === SPACING === */
+    --space-unit: 1rem;
+    --space-xxs: calc(0.25 * var(--space-unit)); /* 4px */
+    --space-xs: calc(0.5 * var(--space-unit)); /* 8px */
+    --space-sm: calc(0.75 * var(--space-unit)); /* 12px */
+    --space-md: calc(1.25 * var(--space-unit)); /* 20px */
+    --space-lg: calc(2 * var(--space-unit)); /* 32px */
+    --space-xl: calc(3.25 * var(--space-unit)); /* 52px */
+    --space-xxl: calc(5.25 * var(--space-unit)); /* 84px */
+
+    /* === ELEMENTS === */
+    /* Icons */
+    --icon-xs: 16px;
+    --icon-sm: 24px;
+    --icon-md: 32px;
+    --icon-lg: 48px;
+    --icon-xl: 64px;
+    /* Buttons */
+    --btn-font-size: 1rem;
+    --btn-radius: 0.25rem;
+    --btn-sm: calc(var(--btn-font-size) - 0.2rem);
+    --btn-md: calc(var(--btn-font-size) + 0.2rem);
+    --btn-lg: calc(var(--btn-font-size) + 0.4rem);
+
+    /* === GLOBAL CSS === */
     * {
         font-family: var(--font-family), var(--fallback-font);
         font-weight: 400;
+    }
+
+    /* === THEMES === */
+
+    /* Light */
+    [data-theme="light"] {
+        --clr-primary: var(--dark-spring-green-40);
+        --clr-accent: var(--grey-20);
     }
 }
