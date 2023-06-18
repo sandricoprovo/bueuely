@@ -1,0 +1,12 @@
+{
+    "path": "src/styles/global.css",
+    "typeScale": {
+        "base": 16,
+        "multiplier": 1.414,
+        "shrink": 0.6,
+        "steps": {
+            "small": 3,
+            "large": 5
+        }
+    }
+}

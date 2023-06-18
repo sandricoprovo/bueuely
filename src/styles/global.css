@@ -1,0 +1,145 @@
+/*
+	Denoken - CSS Design Token Generator
+	Built by Sandrico Provo https://www.sandricoprovo.dev/
+*/
+
+:root {
+    /* === COLORS === */
+    /* Grey Scale */
+    --grey-10: hsla(0, 0%, 6%, 1);
+    --grey-20: hsla(0, 0%, 8%, 1);
+    --grey-30: hsla(0, 0%, 10%, 1);
+    --grey-40: hsla(0, 0%, 12%, 1); /* main */
+    --grey-50: hsla(0, 0%, 20%, 1);
+    --grey-60: hsla(0, 0%, 27%, 1);
+    --grey-70: hsla(0, 0%, 35%, 1);
+    --grey-80: hsla(0, 0%, 44%, 1);
+    --grey-90: hsla(0, 0%, 53%, 1);
+    --grey-100: hsla(0, 0%, 62%, 1);
+    --grey-110: hsla(0, 0%, 71%, 1);
+    --grey-120: hsla(0, 0%, 80%, 1);
+    --grey-130: hsla(0, 0%, 90%, 1);
+    --grey-140: hsla(0, 0%, 100%, 1);
+    /* Dark Spring Green */
+    --dark-spring-green-10: hsla(135, 25%, 51%, 1);
+    --dark-spring-green-20: hsla(136, 33%, 44%, 1);
+    --dark-spring-green-30: hsla(139, 48%, 36%, 1);
+    --dark-spring-green-40: hsla(148, 98%, 24%, 1); /* main */
+    --dark-spring-green-50: hsla(147, 98%, 21%, 1);
+    --dark-spring-green-60: hsla(147, 98%, 18%, 1);
+    --dark-spring-green-70: hsla(145, 100%, 14%, 1);
+    --dark-spring-green-80: hsla(144, 100%, 11%, 1);
+    --dark-spring-green-90: hsla(142, 100%, 8%, 1);
+    --dark-spring-green-100: hsla(139, 100%, 6%, 1);
+    /* Engineering Orange */
+    --engineering-orange-10: hsl(8, 60%, 61%, 1);
+    --engineering-orange-20: hsl(7, 58%, 55%, 1);
+    --engineering-orange-30: hsl(6, 61%, 48%, 1);
+    --engineering-orange-40: hsl(4, 83%, 40%, 1); /* main */
+    --engineering-orange-50: hsl(4, 85%, 34%, 1);
+    --engineering-orange-60: hsl(5, 88%, 29%, 1);
+    --engineering-orange-70: hsl(4, 90%, 24%, 1);
+    --engineering-orange-80: hsl(3, 92%, 19%, 1);
+    --engineering-orange-90: hsl(3, 94%, 14%, 1);
+    --engineering-orange-100: hsl(2, 96%, 10%, 1);
+    /* Jonquil */
+    --jonquil-10: hsla(47, 87%, 72%, 1);
+    --jonquil-20: hsla(47, 88%, 67%, 1);
+    --jonquil-30: hsla(48, 88%, 61%, 1);
+    --jonquil-40: hsla(50, 98%, 48%, 1); /* main */
+    --jonquil-50: hsla(50, 99%, 41%, 1);
+    --jonquil-60: hsla(50, 99%, 35%, 1);
+    --jonquil-70: hsla(50, 99%, 30%, 1);
+    --jonquil-80: hsla(50, 100%, 24%, 1);
+    --jonquil-90: hsla(49, 100%, 18%, 1);
+    --jonquil-100: hsla(49, 100%, 13%, 1);
+
+    /* === TYPOGRAPHY === */
+    --font-family: "Overpass";
+    --fallback-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+    /* Config */
+    --scale: 1.414;
+    --shrink: 0.6;
+
+    /* Scale */
+    --font-100: 5.66px;
+    --font-200: 8px;
+    --font-300: 11.32px;
+    --font-400: 16px;
+    --font-500: 22.62px;
+    --font-600: 31.99px;
+    --font-700: 45.23px;
+    --font-800: 63.96px;
+    --font-900: 90.44px;
+
+    /* Clamps */
+    --fs-100: var(--font-100);
+    --fs-200: var(--font-200);
+    --fs-300: var(--font-300);
+    --fs-400: var(--font-400); /* Base */
+    --fs-500: clamp(
+        calc(var(--font-400) * var(--scale) * var(--shrink)),
+        12vw,
+        var(--font-500)
+    );
+    --fs-600: clamp(
+        calc(var(--font-500) * var(--scale) * var(--shrink)),
+        12vw,
+        var(--font-600)
+    );
+    --fs-700: clamp(
+        calc(var(--font-600) * var(--scale) * var(--shrink)),
+        12vw,
+        var(--font-700)
+    );
+    --fs-800: clamp(
+        calc(var(--font-700) * var(--scale) * var(--shrink)),
+        12vw,
+        var(--font-800)
+    );
+    --fs-900: clamp(
+        calc(var(--font-800) * var(--scale) * var(--shrink)),
+        12vw,
+        var(--font-900)
+    );
+
+    /* === SPACING === */
+    --space-unit: 1rem;
+    --space-xxs: calc(0.25 * var(--space-unit)); /* 4px */
+    --space-xs: calc(0.5 * var(--space-unit)); /* 8px */
+    --space-sm: calc(0.75 * var(--space-unit)); /* 12px */
+    --space-md: calc(1.25 * var(--space-unit)); /* 20px */
+    --space-lg: calc(2 * var(--space-unit)); /* 32px */
+    --space-xl: calc(3.25 * var(--space-unit)); /* 52px */
+    --space-xxl: calc(5.25 * var(--space-unit)); /* 84px */
+
+    /* === ELEMENTS === */
+    /* Icons */
+    --icon-xs: 16px;
+    --icon-sm: 24px;
+    --icon-md: 32px;
+    --icon-lg: 48px;
+    --icon-xl: 64px;
+    /* Buttons */
+    --btn-font-size: 1rem;
+    --btn-radius: 0.25rem;
+    --btn-sm: calc(var(--btn-font-size) - 0.2rem);
+    --btn-md: calc(var(--btn-font-size) + 0.2rem);
+    --btn-lg: calc(var(--btn-font-size) + 0.4rem);
+
+    /* === GLOBAL CSS === */
+    * {
+        font-family: var(--font-family), var(--fallback-font);
+        font-weight: 400;
+    }
+
+    /* === THEMES === */
+
+    /* Light */
+    [data-theme="light"] {
+        --clr-primary: var(--dark-spring-green-40);
+        --clr-accent: var(--grey-20);
+    }
+}
