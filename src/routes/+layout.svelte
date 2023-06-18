@@ -1,12 +1,10 @@
 <script lang="ts">
-    import Header from '../components/Header.svelte';
+    import "../styles/reset.css";
+    import "../styles/fonts.css";
+    import "../styles/global.css";
 </script>
 
-<Header />
 <slot />
-<footer>
-    <p>FOOTER</p>
-</footer>
 
 <style lang="postcss">
 </style>
