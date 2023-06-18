@@ -15,9 +15,7 @@
                     ? !hideWhenAuthenticated
                     : hideWhenAuthenticated}
 
-                {#if showAlways}
-                    <NavLink {href} {label} />
-                {:else if showLink}
+                {#if showAlways || showLink}
                     <NavLink {href} {label} />
                 {/if}
             {/each}
