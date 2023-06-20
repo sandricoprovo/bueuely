@@ -8,4 +8,15 @@
 </a>
 
 <style lang="postcss">
+    a {
+        text-decoration: none;
+        color: var(--clr-primary);
+        font-weight: bold;
+        font-size: var(--font-size-lg);
+        transition: color var(--transition);
+
+        &:hover {
+            color: red;
+        }
+    }
 </style>

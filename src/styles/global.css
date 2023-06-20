@@ -115,6 +115,10 @@
     --space-xl: calc(3.25 * var(--space-unit)); /* 52px */
     --space-xxl: calc(5.25 * var(--space-unit)); /* 84px */
 
+    /* === ANIMATIONS === */
+    --easing: cubic-bezier(1, 0, 0, 1);
+    --transition: 200ms var(--easing);
+
     /* === ELEMENTS === */
     /* Icons */
     --icon-xs: 16px;

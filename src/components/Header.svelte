@@ -1,9 +1,10 @@
 <script lang="ts">
     import NavLink from "./Navigation/NavLink.svelte";
     import { NAVIGATION_LINKS } from "../config/navigation.config";
+    import ThemeToggle from "./ThemeToggle.svelte";
 
     // TODO: replace with real auth check
-    const isAuthenticated = false;
+    const isAuthenticated = true;
 </script>
 
 <header>
@@ -20,6 +21,7 @@
                 {/if}
             {/each}
         </ul>
+        <ThemeToggle />
     </nav>
 </header>
 
