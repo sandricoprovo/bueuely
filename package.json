@@ -4,8 +4,9 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "dev": "caddy stop && caddy start && vite dev",
-        "dev:stop": "caddy stop",
+        "dev": "vite dev",
+        "caddy:start": "caddy start && vite dev",
+        "caddy:stop": "caddy stop",
         "build": "vite build",
         "preview": "vite preview",
         "test": "playwright test",
