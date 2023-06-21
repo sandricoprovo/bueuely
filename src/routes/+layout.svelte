@@ -9,4 +9,7 @@
 <slot />
 
 <style lang="postcss">
+    :global(*) {
+        color: var(--clr-text);
+    }
 </style>

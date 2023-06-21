@@ -34,9 +34,15 @@
         padding: var(--space-lg) var(--space-lg);
         margin-block-end: var(--space-lg);
 
-        & > nav > ul {
+        & > nav {
             display: flex;
-            gap: var(--space-lg);
+            align-items: center;
+            /* gap: var(--space-lg); */
+
+            & > ul {
+                display: flex;
+                gap: var(--space-lg);
+            }
         }
     }
 </style>
