@@ -1,48 +1,28 @@
 <script lang="ts">
-    import NavLink from "./Navigation/NavLink.svelte";
-    import { NAVIGATION_LINKS } from "../config/navigation.config";
-    import ThemeToggle from "./ThemeToggle.svelte";
+    import NavBar from "./Navigation/NavBar.svelte";
+    import NavMenu from "./Navigation/NavMenu.svelte";
 
     // TODO: replace with real auth check
-    const isAuthenticated = true;
+    const isAuthenticated = false;
+    const isMobile = false;
 </script>
 
-<header>
+<header class="container__padding">
     <p>LOGO</p>
-    <nav>
-        <ul>
-            {#each NAVIGATION_LINKS as { hideWhenAuthenticated, showAlways, href, label }}
-                {@const showLink = isAuthenticated
-                    ? !hideWhenAuthenticated
-                    : hideWhenAuthenticated}
-
-                {#if showAlways || showLink}
-                    <NavLink {href} {label} />
-                {/if}
-            {/each}
-        </ul>
-        <ThemeToggle />
-    </nav>
+    {#if isMobile}
+        <NavMenu {isAuthenticated} />
+    {:else}
+        <NavBar {isAuthenticated} />
+    {/if}
 </header>
 
 <style lang="postcss">
     header {
-        border: 2px solid black;
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: var(--space-lg) var(--space-lg);
         margin-block-end: var(--space-lg);
-
-        & > nav {
-            display: flex;
-            align-items: center;
-            /* gap: var(--space-lg); */
-
-            & > ul {
-                display: flex;
-                gap: var(--space-lg);
-            }
-        }
+        transition: padding var(--transition);
     }
 </style>

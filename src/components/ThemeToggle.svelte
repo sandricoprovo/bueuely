@@ -2,7 +2,6 @@
     import type { SubmitFunction } from "@sveltejs/kit";
     import { enhance } from "$app/forms";
     import { THEMES } from "../constants/themes";
-    import { onMount } from "svelte";
     import { uppercaseFirstLetter } from "../utils/uppercaseFirstLetter";
 
     let showThemeToggle: boolean = false;
