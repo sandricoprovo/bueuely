@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { NAVIGATION_LINKS } from "../../config/navigation.config";
+    import { NAVIGATION_LINKS } from "$config/navigation.config";
     import Content from "./elements/Content.svelte";
     import MenuButton from "./elements/MenuButton.svelte";
     import NavLink from "./elements/NavLink.svelte";

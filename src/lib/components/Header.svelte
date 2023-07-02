@@ -2,14 +2,14 @@
     import NavBar from "./Navigation/NavBar.svelte";
     import NavMenu from "./Navigation/NavMenu.svelte";
 
-    // TODO: replace with real auth check
     const isAuthenticated = false;
-    const isMobile = false;
+    let screenWidth: number;
 </script>
 
+<svelte:window bind:innerWidth={screenWidth} />
 <header class="container__padding">
     <p>LOGO</p>
-    {#if isMobile}
+    {#if screenWidth < 640}
         <NavMenu {isAuthenticated} />
     {:else}
         <NavBar {isAuthenticated} />

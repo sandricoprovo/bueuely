@@ -12,6 +12,9 @@ const config = {
             checkOrigin: process.env.NODE_ENV === 'production' ? true : false
         },
         adapter: adapter(),
+        alias: {
+            $config: './src/config',
+        }
     },
 };
 

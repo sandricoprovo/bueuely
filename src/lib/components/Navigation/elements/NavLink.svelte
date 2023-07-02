@@ -27,7 +27,7 @@
             transition: opacity var(--transition), bottom var(--transition);
         }
 
-        @media supports (hover: hover) {
+        @media (hover: hover) {
             &:hover::after {
                 opacity: 1;
                 bottom: -8px;

@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { NAVIGATION_LINKS } from "../../config/navigation.config";
+    import { NAVIGATION_LINKS } from "$config/navigation.config";
     import NavLink from "./elements/NavLink.svelte";
 
     export let isAuthenticated: boolean;
