@@ -8,7 +8,14 @@ const config = {
         typescript: true,
     }),
     kit: {
+        csrf: {
+            checkOrigin: process.env.NODE_ENV === 'production' ? true : false
+        },
         adapter: adapter(),
+        alias: {
+            $config: './src/config',
+            $stores: './src/stores',
+        }
     },
 };
 

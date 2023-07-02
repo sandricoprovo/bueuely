@@ -6,6 +6,8 @@
 :root {
     /* === COLORS === */
     /* Grey Scale */
+    --grey-hue: 0;
+    --grey-saturation: 0%;
     --grey-10: hsla(0, 0%, 6%, 1);
     --grey-20: hsla(0, 0%, 8%, 1);
     --grey-30: hsla(0, 0%, 10%, 1);
@@ -21,6 +23,8 @@
     --grey-130: hsla(0, 0%, 90%, 1);
     --grey-140: hsla(0, 0%, 100%, 1);
     /* Dark Spring Green */
+    --dark-spring-green-hue: 148;
+    --dark-spring-green-saturation: 98%;
     --dark-spring-green-10: hsla(135, 25%, 51%, 1);
     --dark-spring-green-20: hsla(136, 33%, 44%, 1);
     --dark-spring-green-30: hsla(139, 48%, 36%, 1);
@@ -32,6 +36,8 @@
     --dark-spring-green-90: hsla(142, 100%, 8%, 1);
     --dark-spring-green-100: hsla(139, 100%, 6%, 1);
     /* Engineering Orange */
+    --engineering-orange-hue: 4;
+    --engineering-orange-saturation: 83%;
     --engineering-orange-10: hsl(8, 60%, 61%, 1);
     --engineering-orange-20: hsl(7, 58%, 55%, 1);
     --engineering-orange-30: hsl(6, 61%, 48%, 1);
@@ -43,6 +49,8 @@
     --engineering-orange-90: hsl(3, 94%, 14%, 1);
     --engineering-orange-100: hsl(2, 96%, 10%, 1);
     /* Jonquil */
+    --jonquil-hue: 50;
+    --jonquil-saturation: 98%;
     --jonquil-10: hsla(47, 87%, 72%, 1);
     --jonquil-20: hsla(47, 88%, 67%, 1);
     --jonquil-30: hsla(48, 88%, 61%, 1);
@@ -105,6 +113,32 @@
         var(--font-900)
     );
 
+    /* === BREAK POINTS === */
+    --bp-xm: 375px;
+    --bp-sm: 640px;
+    --bp-md: 768px;
+    --bp-lg: 1024px;
+    --bp-xl: 1280px;
+    --bp-xxl: 1536px;
+
+    /* === SHADOWS === */
+    /* NOTE: Shadow color is set by the theme */
+    --shadow-color: 0deg 0% 87%;
+    --shadow-elevation-low: 0.7px 0.8px 1.3px hsl(var(--shadow-color) / 0.22),
+        1.1px 1.3px 2px -1px hsl(var(--shadow-color) / 0.25),
+        2.4px 2.8px 4.4px -2px hsl(var(--shadow-color) / 0.29);
+    --shadow-elevation-medium: 0.7px 0.8px 1.3px hsl(var(--shadow-color) / 0.23),
+        2.2px 2.6px 4.1px -0.7px hsl(var(--shadow-color) / 0.26),
+        5.1px 6.1px 9.5px -1.3px hsl(var(--shadow-color) / 0.29),
+        11.8px 14.2px 22.2px -2px hsl(var(--shadow-color) / 0.32);
+    --shadow-elevation-high: 0.7px 0.8px 1.3px hsl(var(--shadow-color) / 0.24),
+        4.1px 5px 7.8px -0.3px hsl(var(--shadow-color) / 0.26),
+        7.8px 9.3px 14.6px -0.7px hsl(var(--shadow-color) / 0.28),
+        13px 15.6px 24.4px -1px hsl(var(--shadow-color) / 0.3),
+        21.2px 25.5px 39.8px -1.3px hsl(var(--shadow-color) / 0.31),
+        33.9px 40.7px 63.6px -1.7px hsl(var(--shadow-color) / 0.33),
+        52.5px 63px 98.4px -2px hsl(var(--shadow-color) / 0.35);
+
     /* === SPACING === */
     --space-unit: 1rem;
     --space-xxs: calc(0.25 * var(--space-unit)); /* 4px */
@@ -113,9 +147,17 @@
     --space-md: calc(1.25 * var(--space-unit)); /* 20px */
     --space-lg: calc(2 * var(--space-unit)); /* 32px */
     --space-xl: calc(3.25 * var(--space-unit)); /* 52px */
+    --space-64: calc(4 * var(--space-unit)); /* 52px */
     --space-xxl: calc(5.25 * var(--space-unit)); /* 84px */
 
+    /* === ANIMATIONS === */
+    --animation-timing: 200ms;
+    --easing: cubic-bezier(0.65, 0.05, 0.36, 1);
+    --transition: var(--animation-timing) var(--easing);
+
     /* === ELEMENTS === */
+    /* Containers */
+    --container-br: 0.75rem;
     /* Icons */
     --icon-xs: 16px;
     --icon-sm: 24px;
@@ -123,23 +165,44 @@
     --icon-lg: 48px;
     --icon-xl: 64px;
     /* Buttons */
+    --btn-padding: var(--space-xs) var(--space-lg);
     --btn-font-size: 1rem;
     --btn-radius: 0.25rem;
     --btn-sm: calc(var(--btn-font-size) - 0.2rem);
     --btn-md: calc(var(--btn-font-size) + 0.2rem);
     --btn-lg: calc(var(--btn-font-size) + 0.4rem);
+}
 
-    /* === GLOBAL CSS === */
-    * {
-        font-family: var(--font-family), var(--fallback-font);
-        font-weight: 400;
+/* === GLOBAL CSS === */
+* {
+    font-family: var(--font-family), var(--fallback-font);
+    font-weight: 400;
+}
+
+/* === Utilities === */
+.container__padding {
+    @media (width <= 640px) {
+        padding: var(--space-md) var(--space-md);
     }
-
-    /* === THEMES === */
-
-    /* Light */
-    [data-theme="light"] {
-        --clr-primary: var(--dark-spring-green-40);
-        --clr-accent: var(--grey-20);
+    @media (width <= 375px) {
+        padding: var(--space-sm) var(--space-sm);
     }
+}
+
+/* === THEMES === */
+
+/* Light */
+.theme__light {
+    --clr-primary: var(--dark-spring-green-40);
+    --clr-accent: var(--grey-20);
+    /* Text */
+    --clr-text: var(--grey-40);
+    /* Buttons */
+    --clr-btn-hover: hsla(var(--grey-hue), var(--grey-saturation), 95%, 1);
+    --clr-btn-list-hover: hsla(var(--grey-hue) var(--grey-saturation) 90%, 1);
+    /* Shadows */
+    --shadow-color: 0deg 0% 87%;
+    /* Backgrounds */
+    --clr-background: var(--grey-140);
+    --clr-container-background: var(--clr-background);
 }
