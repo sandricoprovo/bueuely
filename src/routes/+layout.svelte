@@ -2,7 +2,7 @@
     import "../styles/reset.css";
     import "../styles/fonts.css";
     import "../styles/global.css";
-    import Header from "$lib/components/Header.svelte";
+    import Header from "$lib/Header.svelte";
 </script>
 
 <Header />

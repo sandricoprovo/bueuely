@@ -15,6 +15,7 @@ const config = {
         alias: {
             $config: './src/config',
             $stores: './src/stores',
+            $db: './src/db',
         }
     },
 };

@@ -1,6 +1,6 @@
 <script lang="ts">
-    import NavBar from "$lib/components/Navigation/NavBar.svelte";
-    import NavMenu from "$lib/components/Navigation/NavMenu.svelte";
+    import NavBar from "$lib/Navigation/NavBar.svelte";
+    import NavMenu from "$lib/Navigation/NavMenu.svelte";
     import { isAuthenticated } from "$stores/auth"
 
     let screenWidth: number;
