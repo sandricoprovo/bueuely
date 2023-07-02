@@ -1,8 +1,8 @@
 <script lang="ts">
-    import NavBar from "./Navigation/NavBar.svelte";
-    import NavMenu from "./Navigation/NavMenu.svelte";
+    import NavBar from "$lib/components/Navigation/NavBar.svelte";
+    import NavMenu from "$lib/components/Navigation/NavMenu.svelte";
+    import { isAuthenticated } from "$stores/auth"
 
-    const isAuthenticated = false;
     let screenWidth: number;
 </script>
 
@@ -10,9 +10,9 @@
 <header class="container__padding">
     <p>LOGO</p>
     {#if screenWidth < 640}
-        <NavMenu {isAuthenticated} />
+        <NavMenu isAuthenticated={$isAuthenticated} />
     {:else}
-        <NavBar {isAuthenticated} />
+        <NavBar isAuthenticated={$isAuthenticated} />
     {/if}
 </header>
 
